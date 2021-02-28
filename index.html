@@ -1,45 +1,54 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>Page Title</title>
-    <script src="app.js"></script>
-</head>
 
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
     <div class="container">
-        <br>
-        <P id="answer" class="answer"></P>
-        <br>
-        <br>
-    
-        <center>
+      <div class="question-container">
+        <div class="question-modal">
+          <h4>Check the boxes you want!</h4>
+          <div class="length-field">
             <label>Length :</label>
-            <input type="number" maxlength="100" value="20" id="length">
-        </center>
-        <br>
-        <br>
-        <div class="checks">
+            <input type="number" maxlength="100" value="20" id="length" />
+          </div>
+          <div class="checks">
             <label class="label">Enable Uppercase Alphabets :</label>
-            <input type="checkbox" id="upper" checked class="val">
-            <br>
-        </div>
-        <div class="checks">
+            <input type="checkbox" id="upper" checked class="val" />
+          </div>
+          <div class="checks">
             <label class="label">Enable Lowercase Alphabets :</label>
-            <input type="checkbox" id="lowwer" checked class="val">
-            <br>
-        </div>
-        <div class="checks">
+            <input type="checkbox" id="lower" checked class="val" />
+          </div>
+          <div class="checks">
             <label class="label">Enable Numbers :</label>
-            <input type="checkbox" id="number" checked class="val">
-            <br>
-        <div class="checks">
+            <input type="checkbox" id="number" checked class="val" />
+          </div>
+          <div class="checks">
             <label class="label">Enable Symbols :</label>
-            <input type="checkbox" id="symbol" checked class="val">
-            <br>
+            <input type="checkbox" id="symbol" checked class="val" />
+          </div>
+
+          <div class="submit-btn">
+            <a href="#" class="btn" id="generate">Generate</a>
+          </div>
         </div>
-        <center>
-            <button id="generate" class="btn">Generate</button>
-        </center>
-    </body>
+      </div>
+
+      <div class="question-container">
+        <div class="answer-modal">
+          <h4>Here is your generated password</h4>
+          <input type="text" class="answer-field" id="myInput" />
+          <div class="copy-btn">
+            <a href="#" class="btn" onclick="copyFucntion()">Copy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
 </html>
